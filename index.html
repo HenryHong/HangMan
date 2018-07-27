@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Hangman Project</title>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div id="hangGame" style="border-style:solid;border-width:3px;width:60%" >
+		<h1 style="text-align:center"> Welcome to the Hangman Game</h1>
+		
+		<div class="w3-container" style="text-align:center">	
+		
+			<div style="display: inline-block;">
+			<h2 id="result" style="text-align:left">Start By Entering a Character</h2>
+			<img id="hangImage" src="hang0.png" style="width:120px;height:150px">
+			</div>
+			
+			<div style="display: inline-block;">
+			<p id="myWord" style="font-size:50px"></p>
+			</div>
+			
+	    </div>
+		
+		
+		<div class="w3-container" style="text-align:center"> 
+			<input type="text" name="newChar" placeholder="Please Enter a Character" maxlength="1" id="sub">
+			<button class="w3-btn w3-blue" onclick="charCheck()" id="submit">Submit</button>
+			<button class="w3-btn w3-grey" onclick="location.reload()">Start New Game</button>
+			<p></p>
+		</div>
+	  
+		<div>
+			<p style="display:inline"> Number of Mistake: </p>
+			<p id="numMis" style="display:inline"></p>
+		</div>
+	  
+		
+		<div>
+			<h3 style="display:inline"> Current Correct Guesses: </h3>
+			<h3 id="correctGuess" style="display:inline"></h3>
+			<h3></h3>
+		</div>
+		
+		<div>
+			<h3 style="display:inline"> Current Wrong Guesses: </h3>
+			<h3 id="wrongGuess" style="display:inline"></h3>
+			<h3></h3>
+		</div>
+	</div>
+    
+	<script src="RandomWords.json"></script>
+    <script src="script.js"></script>
+</body>
+</html>
